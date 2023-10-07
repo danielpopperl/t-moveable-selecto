@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+.logos .selecto {
+  padding: 16px;
+}
+
+.logo img {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cube {
+  display: inline-block;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  background: #eee;
+  --color: #4af;
+  line-height: 40px;
+}
+
+.elements {
+  margin-top: 40px;
+  /* border: 2px solid #eee; */
+}
+
+.selecto-area {
+  padding: 20px;
+}
+
+#selecto1 .cube {
+  transition: all ease 0.2s;
+}
+
+.moveable #selecto1 .cube {
+  transition: none;
+}
+
+.selecto-area .selected {
+  color: #fff;
+  background: var(--color);
+}
+
+.empty.elements {
+  border: none;
+}
+
+.correct .target {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 10px 20px;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+}
